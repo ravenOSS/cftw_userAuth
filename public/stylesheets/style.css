@@ -9,6 +9,10 @@ body{
 .page-item.active .page-link{
   background-color: #f31212
 }
- .btn.btn-primary{
+.btn.btn-primary{
    background-color: #f31212
  }
+
+ .button{
+  background-color:grey
+}
