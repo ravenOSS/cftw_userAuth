@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+<% include partials/_header %>
+<% include partials/_nav %>
 
-    <div>
+<div class="container">
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  
+  <div>
 
-    <a class="button" href="/register2">Register</a>
-    <!--btn btn-primary -->
+    <a class="btn btn-dark" href="/register">Register</a>
 
-    <a class="button" href="/login">Login</a>
-
-    <!--btn btn-secondary -->
+    <a class="btn btn-secondary" href="/login">Login</a>
 
   </div>
+</div>
 
-  </body>
-</html>
+<% include partials/_footer %>

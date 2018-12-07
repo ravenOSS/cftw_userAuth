@@ -1,13 +1,36 @@
-<form action="/login" method="post">
-    <div>
-        <label>Username:</label>
-        <input type="text" name="username"/>
+<% include partials/_header %>
+<% include partials/_nav %>
+
+<div class="container">
+
+  <h2><%= title %></h2>
+
+  <!-- strategy.js authentication messages (not flash messages!)-->
+  <div class="col-sm-6">
+    <% if (message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+  </div>
+
+  <form action="/login" method="post">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" name="username" aria-describedby="userHelp" placeholder="Enter Username"
+          autofocus="required">
+
+      </div>
     </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password"/>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" name="password" placeholder="Password">
+      </div>
     </div>
-    <div>
-        <input type="submit" value="Log In"/>
-    </div>
-</form>
+      <button type="submit" value="Log In" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
+
+<% include partials/_footer %>

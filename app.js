@@ -1,10 +1,8 @@
 var dotenv = require('dotenv').config();
-var bodyParser = require('body-parser'); // !!!
 var createError = require('http-errors');
 require('./config/db');
 var express = require('express');
 var flash = require('connect-flash'); // !!!
-// var cookieParser = require('cookie-parser'); // !!!
 var logger = require('morgan');
 var path = require('path');
 var passport = require('passport'); // !!!

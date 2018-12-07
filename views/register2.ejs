@@ -1,13 +1,67 @@
-<form action="/register" method="post">
-    <div>
-        <label>Username:</label>
-        <input type="text" name="username"/>
+<% include partials/_header %>
+<% include partials/_nav %>
+
+<div class="container">
+
+  <h2><%= title %></h2>
+
+<!-- strategy.js authentication messages (not flash messages!)-->
+  <div class="col-sm-6">
+    <% if (message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+  </div>
+
+  <script>
+
+  // Should password fields have same name and use array index to access?
+  function validate() {
+    var pass1 = document.getElementByName("password")[0].value;
+    console.log(document.getElementByName("password")[0].value);
+    var pass2 = document.getElementById("confirm_password")[0].value;
+    if(pass1.value==pass2.value) { 
+      return true;
+  }
+    alert("Passwords do not match");
+  }
+  </script>
+
+  <form id="regform" action="/register" method="post">
+
+    <div class="form-group">
+      <label for="username">User Name</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" name="username" placeholder="Create username" required autofocus="required"/>
+        <small id="userHelp" class="form-text text-muted">We'll never share your data.</small>
+      </div>
     </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password"/>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" name="password" onblur="validate" placeholder="Password" required />
+      </div>
     </div>
-    <div>
-        <input type="submit" value="Register"/>
+
+    <div class="form-group">
+    <label for="confirm_password">Password</label>
+    <div class="col-sm-6">
+      <input type="password" class="form-control" name="confirm_password" onblur="validate" placeholder="Password" required />
+      <small id="userHelp" class="form-text text-muted">Please confirm password.</small>
     </div>
-</form>
+  </div>
+
+    <button type="submit" value="register" class="btn btn-primary">Register</button>
+
+    <script> 
+    var form = document.getElementById("regform").addEventListener('submit', function() {
+      return validate();
+      )
+    }, false);
+
+    </script>
+
+  </form>
+</div>
+
+<% include partials/_footer %>
