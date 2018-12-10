@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 let bcrypt = require('bcrypt-nodejs');
-let passport = require('./strategy');
+let passport = require('../config/passport');
 let uuid4 = require('uuid/v4');
 
 let userSchema = mongoose.Schema({
