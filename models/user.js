@@ -6,8 +6,11 @@ let uuid4 = require('uuid/v4');
 let userSchema = mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  key: { type: String },
-  account_number: { type: String, default: uuid4 }
+  email: { type: String, required: true },
+  bio: { type: String },
+  displayName: { type: String },
+  account_number: { type: String, default: uuid4 },
+  createdAt: { type: Date, 'default': Date.now }
 });
 
 // generating a hashed password
