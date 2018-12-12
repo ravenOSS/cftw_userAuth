@@ -2,6 +2,7 @@ var dotenv = require('dotenv').config();
 var createError = require('http-errors');
 require('./config/db');
 var express = require('express');
+var favicon = require('serve-favicon');
 var flash = require('connect-flash'); // !!!
 var logger = require('morgan');
 var path = require('path');
@@ -16,6 +17,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, 'public', 'bdo_icon.ico')));
 
 app.use(logger('dev'));
 app.use(express.json());
