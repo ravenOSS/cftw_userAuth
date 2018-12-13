@@ -3,7 +3,7 @@
 
 
 <form action="/edit" method="post">
-<input type="text" class="form-control" name="displayname"  placeholder="Display name" value="<%= currentUser.displayName || "" %>">
+<input type="text" class="form-control" name="displayname"  placeholder="Display name" value="<%= currentUser.displayName || "" %>" focus=required>
 <textarea  class="form-control" name="bio" placeholder="Tell us something about yourself!"><%= currentUser.bio || "" %></textarea>
 <input type="submit" value="Update" class="btn btn-primary btn-block">
 </form>

@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-let dbURI = process.env.DB_atlasURI;
+let dbURI = process.env.DB_atlasURI_SRV;
 
 if (process.env.NODE_ENV === 'production') {
-  dbURI = process.env.DB_atlasURI;
+  dbURI = process.env.DB_atlasURI_SRV;
 }
 // added qualifiers to stop mongoose deprecation warnings
 mongoose.connect(dbURI, { useNewUrlParser: true });

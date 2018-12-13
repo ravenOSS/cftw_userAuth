@@ -1,5 +1,3 @@
 # cftw_userAuth
 
-mongodb://cftw_2018:<PASSWORD>@bancodeloro-shard-00-00-keebo.azure.mongodb.net:27017,bancodeloro-shard-00-01-keebo.azure.mongodb.net:27017,bancodeloro-shard-00-02-keebo.azure.mongodb.net:27017/test?ssl=true&replicaSet=bancoDelOro-shard-0&authSource=admin&retryWrites=true
-
-Test text for commit message
+DB_atlasURI_SRV=mongodb+srv://cftw_2018:<PASSWORD>@bancodeloro-keebo.azure.mongodb.net/cftw_auth?retryWrites=true

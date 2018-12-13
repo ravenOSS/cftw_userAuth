@@ -23,7 +23,7 @@ function ensureAuthenticated (req, res, next) {
 
 /* GET frontpage. */
 router.get('/', function (req, res, next) {
-  res.render('frontpage', { title: 'Your Bank', strapline: 'A place to Stash Your Cash' });
+  res.render('frontpage', { title: 'Your Banco del Oro', strapline: 'A place to Stash Your Cash' });
 });
 
 /* GET registration page */
