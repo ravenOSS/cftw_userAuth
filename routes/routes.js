@@ -100,7 +100,7 @@ router.get('/users/:username', function (req, res, next) {
 });
 
 router.get('/edit', ensureAuthenticated, function (req, res) {
-  res.render('edit');
+  res.render('edit', { title: 'Edit your profile' });
 });
 
 router.post('/edit', ensureAuthenticated, function (req, res, next) {
