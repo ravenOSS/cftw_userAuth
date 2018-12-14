@@ -1,11 +1,11 @@
 <% include partials/_header %>
-<% include partials/_nav.ejs %>
-<% include partials/_css-js.ejs %>
+<% include partials/_nav %>
+<% include partials/_css-js %>
 
 <script>
   $(document).ready(function () {
     $('#usertable').DataTable({
-      "scrollY": "200px",
+      "scrollY": "600px",
       "scrollCollapse": true,
       "ajax": {
         "url": "http://192.168.0.101:4000/usertable",
@@ -13,7 +13,7 @@
       },
       columns: [
         { data: "username" },
-        { data: "password" }
+        { data: "password" },
         { data: "email" },
         { data: "bio" },
         { data: "account_number" },

@@ -7,7 +7,7 @@ let userSchema = mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   email: { type: String, required: true },
-  bio: { type: String },
+  bio: { type: String, default: '' },
   displayName: { type: String },
   account_number: { type: String, default: uuid4 },
   createdAt: { type: Date, 'default': Date.now }
