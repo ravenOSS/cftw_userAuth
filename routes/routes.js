@@ -76,7 +76,6 @@ router.get('/usertable', function (req, res, next) {
     .sort({ createdAt: 'descending' })
     .exec(function (err, users) {
       if (err) { return next(err); }
-      console.log(users);
       res.json(users);
     });
 });
