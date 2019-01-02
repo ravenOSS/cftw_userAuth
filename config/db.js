@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-let dbURI = process.env.DB_localURI;
+let dbURI = process.env.DB_atlasURI_SRV;
 
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.DB_atlasURI;
