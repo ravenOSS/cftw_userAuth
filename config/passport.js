@@ -37,6 +37,7 @@ passport.use('local-login', new LocalStrategy(
 passport.use('local-register', new LocalStrategy({
   usernameField: 'username',
   passwordField: 'password',
+
   passReqToCallback: true
 },
 function (req, username, password, done) {
@@ -52,6 +53,7 @@ function (req, username, password, done) {
         var newUser = new User();
         newUser.username = req.body.username;
         newUser.password = newUser.generateHash(password);
+        newUser.email = req.body.email;
         newUser.save(function (err) {
           if (err) {
             console.log(err);
