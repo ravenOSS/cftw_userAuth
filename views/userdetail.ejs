@@ -8,14 +8,15 @@
       "scrollY": "200px",
       "scrollCollapse": true,
       "ajax": {
-        "url": "http://192.168.0.101:4000/usertable",
+        "url": "/usertable",
         "dataSrc": ""
       },
       columns: [
         { data: "username" },
-        { data: "password" }
+        { data: "password" },
         { data: "email" },
         { data: "bio" },
+        { data: "displayName" },
         { data: "account_number" },
         { data: "createdAt" }
       ]
@@ -34,6 +35,7 @@
           <th>Password</th>
           <th>Email</th>
           <th>Bio</th>
+          <th>Display Name</th>
           <th>Account</th>
           <th>Created</th>
 
